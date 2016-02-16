@@ -1,0 +1,94 @@
+/*!
+ * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+body {
+    margin-top: 100px;
+    background-color: white;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+
+
+@media(min-width:768px) {
+
+    #page-wrapper {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+
+        background-position:inherit;
+
+
+    }
+}
+.navbar-header{
+    height: 75px;
+    background-color: transparent;/*db name color---------*/
+}
+.navbar{
+    background-color: #3366FF;
+}
+
+
+/* Top Navigation */
+form{
+    padding-top: 5%;
+    padding-right:10px; 
+}
+form>input{
+    margin-right: 0px;
+    width: 40%;
+    background-color:white;
+    border-radius: 1px;
+    border: 1px solid white;
+    font-size: 12pt;
+}
+form>button{
+    margin-right: 0px;
+    background-color:white;
+    border-radius: 1px;
+    border: 1px solid white;
+    font-size: 12pt;   
+} 
+
+.tab-panels ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 3px 10px;
+    color: black;
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 10px 10px;
+}
+
+.tab-panels ul li:hover{
+    color:black;
+    background: #f2f2f2;
+}
+.tab-panels ul li.active{   
+    color:black;
+    border:1px solid black;
+}
+
+.tab-panels .project{
+        display:none;
+        padding:30px;
+        border-left: 0 0 10px 10px;
+}
+.tab-panels .project.active{
+    display:block;
+}
