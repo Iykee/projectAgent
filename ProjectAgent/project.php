@@ -122,10 +122,10 @@
                         <h1 class="page-header">
                              <div class="tab-panels">
                                     <ul class="tabs">
-                                        <li data-panel="panel1" class="active"><h1>Finished</h1></li>
-                                        <li data-panel="panel2"><h1 >On-Going</h1></li>
-                                        <li data-panel="panel3"><h1 >Pending</h1></li>
-                                        <li data-panel="panel4"><h1 >Create</h1></li>
+                                        <li data-panel="panel1" class="active"><h4>Finished</h4></li>
+                                        <li data-panel="panel2"><h4 >On-Going</h4></li>
+                                        <li data-panel="panel3"><h4 >Pending</h4></li>
+                                        <li data-panel="panel4"><h4 >Create</h4></li>
                                     </ul>
                             </div>
 
@@ -205,7 +205,7 @@
                                             <input name="street" placeholder="Location(street/specific place)"/><br> 
                                             <input name="propose"placeholder="Proposed Budget"/><br>
                                             <input name="budget" placeholder="Budget Allocated"/><br>
-                                            <div id="option-sector" ><select name="comID" required style="width:100%;border-radius:5px; color:#9b9b9b; 
+                                            <div id="option-sector" ><select name="comID" required style="width:100%;border-radius:5px; color:#9b9b9b;
                                                 margin-top:5px;font-size: 14pt; height:40px; padding: 5px 7px;" > 
                                             <option disabled selected value="" style="display:none;">Committee</option>
 

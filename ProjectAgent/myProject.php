@@ -125,6 +125,8 @@
                             echo "<h4><b>Committee: </b>".$comName."</h4>";
                             echo "<h4><b>Description: </b>".$data['projDesc']."<h4>";
                             ?>
+
+                            <!--
                             <div >  
                                 <h2 class="page-header" style="text-align:center;">
                                     <button  data-toggle="collapse" data-target="#expenses" class="btn btn-primary" 
@@ -141,6 +143,8 @@
                                             <td ><h4 style="color:darkgreen;"><u>Amount Expense</u></h4></td>
                                             <td ><h4 style="color:darkgreen;"><u>Date</u></h4></td>
                                         </thead>
+
+                            -->           
                                         <?php
                                             $budsql="SELECT * FROM Budget";
                                             $budresult = mysqli_query($connect,$budsql) or die("ERROR CONNECTING TO DB");
@@ -161,7 +165,10 @@
 
 
                                         ?>
-                                        <form method="post" action="sql/update.php">
+
+                                <!--
+
+                                    <form method="post" action="sql/update.php">
                                         <div class="col-lg-8">
                                             <input name="expenses" placeholder="Amount Expense" type="number" required>
                                             <input name="description" placeholder="Description (Ex: 4 Pieces Barrel..)" type="text" required>
@@ -171,6 +178,10 @@
                                             ?>
                                         </div>
                                     </form>
+
+                                -->    
+
+                            <!--
                                     <br>
                                     <br>    
                                     </table> 
@@ -178,22 +189,34 @@
                                 </ul>
                             </div> 
 
+                            -->
 
 
 
-
+                            <!--
                             <h2 class='page-header' style='text-align:center;'>
                                 <button  data-toggle="collapse" data-target="#demo" class="btn btn-success" style="font-size:18px; width:90%">View Project Gallery</button>
                             </h2>
+                            -->
+
+                            <h2 class='page-header' style='text-align:left;'>
+                                <button  data-toggle="collapse" data-target="#demo1" class="btn btn-success" style="font-size:18px; width:20%">View Project Gallery</button>
+                                <button  data-toggle="collapse" data-target="#demo" class="btn btn-default" style="font-size:18px; width:2%%">+</button>
+                            </h2>
+
+                            
+
                             <ul id="demo" class="collapse">
                                 <form action='sql/update.php' method='post' style="width:60%;">
 
                                     <input  name='imageLink' placeholder='Image Link' required>
                                     <input  name='location' placeholder='Location' required>
-                                    <?php echo "<button name='addimage' class='btn btn-warning' style='width:95%; margin-left:5px;' value='$projectID'>Add Project Photo</button>"; ?>
+                                   <?php echo "<button name='addimage' class='btn btn-warning' style='width:95%; margin-left:5px;' value='$projectID'>Add Project Photo</button>"; ?>
                                 </form>
+                            </ul>
 
-                            
+                            <ul id="demo1" class="collapse">
+
                                 <?php
     #SQL for Image with Location-----------------------------------------------------
                                 echo "<div id='image-wrapper'>";
@@ -249,6 +272,7 @@
                     ?>
 
                 </ul>
+
                 <br>
                 <br>
                 <br>

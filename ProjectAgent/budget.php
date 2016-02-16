@@ -77,9 +77,42 @@
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Budget
-                        </h1>
+        
+                        <!--<h1 class="page-header">Budget</h1>-->
+                        <br></br>
+                        <img src="pics/budget.png" alt="Budget List" style="width:1000px;height:500px;">
+
+                        <br>
+
+                        <!-- 
+
+                            <table border="1" style="width:100%;">
+                              <tr>
+                                <td>Project Name</td>
+                                <td>Proposed Budget</td> 
+                                <td>Date to Finish</td>
+                              </tr>
+                              <tr>
+                                <td>Eve</td>
+                                <td>Jackson</td> 
+                                <td>94</td>
+                              </tr>
+                              <tr>
+                                <td>Jill</td>
+                                <td>Smith</td> 
+                                <td>50</td>
+                              </tr>
+                              <tr>
+                                <td>Eve</td>
+                                <td>Jackson</td> 
+                                <td>94</td>
+                              </tr>
+                            </table>
+
+                        -->
+
+
+                    <!--                           
                         <div class="tab-panels">
                            <ul class="tabs">
 
@@ -167,7 +200,7 @@
                         ?>
                    
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <!-- /.row -->
                 

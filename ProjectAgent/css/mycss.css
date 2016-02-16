@@ -9,7 +9,7 @@
 
 body {
     margin-top: 150px;
-    background-color:  #CC6666; /**rgba(0, 48, 82, 0.98);*/
+    background-color: #547c65; /**#CC6666;***/ /**rgba(0, 48, 82, 0.98);*/ */
 }
 /*image wrapper*/
 @media(min-width:768px) {
@@ -37,7 +37,7 @@ body {
 #page-wrapper {
     width: 100%;
     padding-right: 0;
-    background-color: hsl(120,60%,70%);/**#CCCCFF..66CC66;*/
+    background-color: #ffd394; /**f08080; /**#b4eeb4; /**#ffe4e1;/**#CCCCFF..66CC66;*/
 }
 
 
@@ -61,7 +61,7 @@ S
 
 
 .navbar{
-    background-color: #33CC99;/*navbar color-------3366FF--------*/
+    background-color: #33CC99;/*navbar color-------3366FF------33CC99--*/
     border-bottom: 2px solid white;
 }
 
@@ -120,9 +120,9 @@ S
         width: 225px;
         margin-left: -207px;
         border: none;
-        border-radius: 0;
+        border-radius: 0px;
         overflow-y: auto;
-        background-color:orange;
+        background-color: orange ;/**orange;**/
         margin-top: 77px;
     }
 
@@ -133,7 +133,9 @@ S
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: transparent;
-        background-color: #3366FF !important;
+        border-bottom-color: white;
+        border-radius: 3px;
+        background-color: #33CC99 !important; /**3366FF*/
     }
 }
 
@@ -201,7 +203,6 @@ button{
 
 #required{
 
-    
     width: 100%;
 }
 #notRequired{
@@ -224,20 +225,20 @@ button{
 .tab-panels ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 3px 10px;
+    padding: 3px 3px;
     color: black;
-    font-weight: 200;
+    font-weight: 10;
     cursor: pointer;
-    border-radius: 10px 10px;
+    border-radius: 0px 0px;
 }
 
 .tab-panels ul li:hover{
     color:black;
-    background: #f2f2f2;
+    background: transparent;/**#33CC99 #f2f2f2;**/
 }
 .tab-panels ul li.active{   
     color:black;
-    border:1px solid black;
+    border-bottom:2px solid white;
 }
 
 .tab-panels .project{
