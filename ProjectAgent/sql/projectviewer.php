@@ -77,7 +77,7 @@
         echo "Proposed By: ".$byName."<br>";
         echo "<br>";
 #view project button using | $projectID | as its value------------------------------
-        echo "<button name='project' value='$projectID' class='btn btn-primary' href='view.php'>View Project</button>";
+        echo "<button name='project' value='$projectID' class='btn btn-success' href='view.php' style='width:60%;margin-left:1px;'>View Project</button>";
         echo "</div>";  
         echo "</div>";
         echo "<hr>";    

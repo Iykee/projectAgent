@@ -55,55 +55,61 @@
                         </h1>
                         <br><br>
                   
-                        <form name="create" method="post" action="create.php">
-                        <?php
-#gets a new id---------------------------------------------------------------
-                        $tableName="project";$IDname="projID";include 'sql/getID.php';
-                        $projID=$newID;
-                            
-                            echo "<h3 style='margin-left:80%; margin-top:-100px; background-color:#ff9595'>  Poject No: ".$projID."</h3>";
-                        ?>
-                        <div class="row">
-                        <div class="col-md-6">            
-                    
-                        <div id="required">
-                        <input name="name"  placeholder="Project Name" required autofocus /><br>
-                  
-                        <input name="description"  placeholder="Description" required /><br>
+                            <form name="create" method="post" action="create.php">
 
-                        <input name="support"  placeholder="Supported By" required /><br>
-                        <input name="expect"  placeholder="Expected Output" required /><br>
-                        <div id="option-sector" ><select name="sector" required style="width:100%;border-radius:5px; color:#9b9b9b; font-size: 20pt; height:40px" > 
-                            <option disabled selected value="" style="display:none;">Sector</option>
+                                <?php
+        #gets a new id---------------------------------------------------------------
+                                    $tableName="project";$IDname="projID";include 'sql/getID.php';
+                                    $projID=$newID;
+                                        
+                                    echo "<h3 style='margin-left:80%; margin-top:-100px; background-color:#ff9595'>  Poject No: ".$projID."</h3>";
+                               
+                                ?>
 
-                            <?php
-#RETRIEVE Sector Type-----------------------------------------------------
-                                $sql="SELECT * FROM sector";
-                                $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
-                                $res=mysql_query($sql) or die (mysql_error());
-                                $id=0;
-                                while($data = mysql_fetch_array($res)){
-                                    $id++;
-                                    echo "<option  value='$id' style='color:black'>".$data['secType']."</option><br>";        
-                                }
-#END OF RETRIEVE sector Type--------------------------------------------- 
-                            ?>
-                        </select></div>
-                        <input type="reset"  style="background-color: #FF0028;"/> 
-                        
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                        <div id="notRequired" >
-                            <input name="imageLink" placeholder="Image Link"  />
-                            <input name="street" placeholder="Location(street/specific place)"/><br> 
-                            <input name="budget" placeholder="Budget"/><br>
-                            <input name="submit"  type="submit" style="background-color: #006AFF; "/>    
-                            
-                        </div>
-                        </div>
-                    </div>
-                    </form>
+                                <div class="row">
+                                    <div class="col-md-6">            
+                                        
+                                        <div id="required">
+                                        
+                                            <input name="name"  placeholder="Project Name" required autofocus /><br>
+                                            
+                                            <input name="description"  placeholder="Description" required /><br>
+
+                                            <input name="support"  placeholder="Supported By" required /><br>
+                                            <input name="expect"  placeholder="Expected Output" required /><br>
+                                            <div id="option-sector" ><select name="sector" required style="width:100%;border-radius:5px; color:#9b9b9b; font-size: 20pt; height:40px" > 
+                                                <option disabled selected value="" style="display:none;">Sector</option>
+
+                                                <?php
+                    #RETRIEVE Sector Type-----------------------------------------------------
+                                                    $sql="SELECT * FROM sector";
+                                                    $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
+                                                    $res=mysql_query($sql) or die (mysql_error());
+                                                    $id=0;
+                                                    while($data = mysql_fetch_array($res)){
+                                                        $id++;
+                                                        echo "<option  value='$id' style='color:black'>".$data['secType']."</option><br>";        
+                                                    }
+                    #END OF RETRIEVE sector Type--------------------------------------------- 
+                                                ?>
+                                            </select></div>
+                                            <input type="reset"  style="background-color: #FF0028;"/> 
+                                    
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div id="notRequired" >
+                                            <input name="imageLink" placeholder="Image Link"  />
+                                            <input name="street" placeholder="Location(street/specific place)"/><br> 
+                                            <input name="budget" placeholder="Budget"/><br>
+                                            <input name="submit"  type="submit" style="background-color: #006AFF; "/>    
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
                       <?php
                         if(isset($_POST['submit'])){   
 
@@ -117,9 +123,9 @@
                             $description=$_POST['description'];
 
 
-                            $support
-                            $expect
-                            $propose=
+                            //$support
+                            //$expect
+                            //$propose=
 
 #INSERT IN Location------------------------------------------------------------------------ 
                             $tableName="location";$IDname="locID";include 'sql/getID.php';  
@@ -165,5 +171,6 @@
     <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 
 </html>

@@ -102,4 +102,10 @@
 
 </body>
 
+<footer> 
+    <?php
+        include 'navigation/footer.php';
+    ?>
+</footer>
+
 </html>

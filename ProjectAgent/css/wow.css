@@ -40,7 +40,8 @@ body {
     background-color: transparent;/*db name color---------*/
 }
 .navbar{
-    background-color: #3366FF;
+    background-color:#33CC99;
+    border-bottom: 2px solid white;
 }
 
 

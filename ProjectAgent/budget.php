@@ -241,4 +241,6 @@
     </script>
 </body>
 
+<!-- No footer -->
+
 </html>
