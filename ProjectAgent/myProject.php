@@ -78,7 +78,7 @@
 #approve button------------------------------------------------------------------
                             if($status!="existing"){
                                 echo "<form method='post' action='sql/update.php'><div id='firstbutton'><button  name='uProject' class='btn btn-success' 
-                                        style='font-size:18px;' value='$projectID' >".$status."</button></div></form>";             
+                                        style='font-size:18px;' value='$projectID'>".$status."</button></div></form>";             
                             }      
                             echo "</h1>";
 #END OF header--------------------------------------------------------------------------------------------------
@@ -144,8 +144,10 @@
                                             <td ><h4 style="color:darkgreen;"><u>Date</u></h4></td>
                                         </thead>
 
-                            -->           
+                            -->         
+
                                         <?php
+                                        /**
                                             $budsql="SELECT * FROM Budget";
                                             $budresult = mysqli_query($connect,$budsql) or die("ERROR CONNECTING TO DB");
                                             $budres=mysql_query($budsql) or die (mysql_error());
@@ -162,7 +164,7 @@
                                                     }                          
                                             }
 
-
+                                        **/
 
                                         ?>
 
@@ -174,7 +176,9 @@
                                             <input name="description" placeholder="Description (Ex: 4 Pieces Barrel..)" type="text" required>
                                         </div>
                                             <?php
+                                            /**
                                                 echo "<button type='submit' name='bProject' class='btn btn-success' value=$projectID >Add Project Expense</button>";
+                                            **/
                                             ?>
                                         </div>
                                     </form>

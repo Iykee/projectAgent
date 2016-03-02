@@ -52,7 +52,7 @@
         $name=$_POST['name'];
         $sector=$_POST['secID'];
         $street=$_POST['street'];
-        $budget=$_POST['budget'];
+        $budget=$_POST['budget'];  //changed from budAlloc to budget -angela (testing)
         $imageLink=$_POST['imageLink'];
         $description=$_POST['description'];
         
@@ -165,14 +165,20 @@
                                         include 'sql/getID.php';
                                         $projID=$newID;
                                             
-                                            echo "<h3 style='margin-left:80%; margin-top:-100px;'>  Project No: ".$projID."</h3>";
+                                            echo "<h3 style='margin-left:82%; margin-top:-110px; color:black;'>  Project No: ".$projID."</h3>";
+                                            //margin-left was changed to 82 from 80; margin-top was changed from -100 to -110 ---angela
                                         ?>
                                         <div class="row">
-                                        <div class="col-md-6">            
+                                        <div class="col-md-6">  
+
+                                        <!-- temporary pa ang naming sa forms by category kay confusing ang pag title - angela -->          
                                     
                                         <div id="required">
+                                        <h4 style="color:white;margin-left:5px">Primary Information :</h4>
                                         <input name="name"  placeholder="Project Name" required autofocus /><br>
                                         <input name="description"  placeholder="Description" required /><br>
+                                        <br>
+                                        <h4 style="color:white;margin-left:5px">Project Support :</h4>
                                         <input name="support"  placeholder="Supported By" required /><br>
                                         <input name="expect"  placeholder="Expected Output" required /><br> 
                                         <div id="option-sector" ><select name="secID" required style="width:100%;border-radius:5px; color:#9b9b9b; 
@@ -193,7 +199,7 @@
                                             ?>
                                         </select></div> 
 
-
+                                        <br>
                                         <input name="reset" type="reset"  class="btn btn-danger" style="width:95%; margin-top:20px;"/>
 
 
@@ -201,8 +207,11 @@
                                         </div>
                                         <div class="col-md-6">
                                         <div id="notRequired" >
+                                            <h4 style="color:white;margin-left:5px">About Project :</h4>
                                             <input name="imageLink" placeholder="Image Link"  />
                                             <input name="street" placeholder="Location(street/specific place)"/><br> 
+                                            <br>
+                                            <h4 style="color:white;margin-left:5px">Budget :</h4>
                                             <input name="propose"placeholder="Proposed Budget"/><br>
                                             <input name="budget" placeholder="Budget Allocated"/><br>
                                             <div id="option-sector" ><select name="comID" required style="width:100%;border-radius:5px; color:#9b9b9b;
@@ -223,7 +232,8 @@
                                             ?>
                                         </select></div> 
 
-                                        <input name="submit" type="submit"   class="btn btn-primary" style="width:98%; margin-top:20px;"/>
+                                        <br>
+                                        <input name="submit" type="submit"   class="btn btn-primary" style="width:95%; margin-top:20px;"/>
                                             
                                         </div>
                                         </div>

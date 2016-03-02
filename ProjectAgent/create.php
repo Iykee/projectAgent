@@ -99,13 +99,17 @@
                                     </div>
 
                                     <div class="col-md-6">
+
                                         <div id="notRequired" >
                                             <input name="imageLink" placeholder="Image Link"  />
                                             <input name="street" placeholder="Location(street/specific place)"/><br> 
+                                        </div> 
+
+                                        <div id="required" >
                                             <input name="budget" placeholder="Budget"/><br>
                                             <input name="submit"  type="submit" style="background-color: #006AFF; "/>    
-                                            
                                         </div>
+
                                     </div>
                                 </div>
 
