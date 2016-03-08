@@ -176,61 +176,65 @@
                                         <div id="required">
                                         <h4 style="color:white;margin-left:5px">Primary Information :</h4>
                                         <input name="name"  placeholder="Project Name" required autofocus /><br>
-                                        <input name="description"  placeholder="Description" required /><br>
-                                        <br>
-                                        <h4 style="color:white;margin-left:5px">Project Support :</h4>
+                                        <input name="description" placeholder="Description" required style="overflow-y:scroll;height:60px;"/><br>
+                                        <input name="street" placeholder="Location(street/specific place)"/><br> 
                                         <input name="support"  placeholder="Supported By" required /><br>
                                         <input name="expect"  placeholder="Expected Output" required /><br> 
-                                        <div id="option-sector" ><select name="secID" required style="width:100%;border-radius:5px; color:#9b9b9b; 
-                                                margin-top:5px;font-size: 14pt; height:40px; padding: 5px 7px;" > 
-                                            <option disabled selected value="" style="display:none;">Sector</option>
-
-                                            <?php
-#RETRIEVE Sector Type-----------------------------------------------------
-                                                $sql="SELECT * FROM sector";
-                                                $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
-                                                $res=mysql_query($sql) or die (mysql_error());
-                                                $id=0;
-                                                while($data = mysql_fetch_array($res)){
-                                                    $id++;
-                                                    echo "<option  value='$id' style='color:black'>".$data['secType']."</option><br>";        
-                                                }
-#END OF RETRIEVE sector Type--------------------------------------------- 
-                                            ?>
-                                        </select></div> 
+                                       
 
                                         <br>
-                                        <input name="reset" type="reset"  class="btn btn-danger" style="width:95%; margin-top:20px;"/>
+                                        <input name="reset" type="reset"  class="btn btn-danger" style="width:95%; margin-top:31px;"/>
 
 
                                         </div>
                                         </div>
                                         <div class="col-md-6">
                                         <div id="notRequired" >
-                                            <h4 style="color:white;margin-left:5px">About Project :</h4>
-                                            <input name="imageLink" placeholder="Image Link"  />
-                                            <input name="street" placeholder="Location(street/specific place)"/><br> 
-                                            <br>
-                                            <h4 style="color:white;margin-left:5px">Budget :</h4>
+                                            <h4 style="color:white;margin-left:5px">Supported By :</h4>
+
+                                                <div id="option-sector" ><select name="secID" required style="width:100%;border-radius:5px; color:#9b9b9b; 
+                                                margin-top:5px;font-size: 14pt; height:40px; padding: 5px 7px;" > 
+                                                    <option disabled selected value="" style="display:none;">Sector</option>
+
+                                                        <?php
+            #RETRIEVE Sector Type-----------------------------------------------------
+                                                            $sql="SELECT * FROM sector";
+                                                            $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
+                                                            $res=mysql_query($sql) or die (mysql_error());
+                                                            $id=0;
+                                                            while($data = mysql_fetch_array($res)){
+                                                                $id++;
+                                                                echo "<option  value='$id' style='color:black'>".$data['secType']."</option><br>";        
+                                                            }
+            #END OF RETRIEVE sector Type--------------------------------------------- 
+                                                        ?>
+                                                    </select>
+                                                </div> 
+
+                                                <div id="option-sector" ><select name="comID" required style="width:100%;border-radius:5px; color:#9b9b9b;
+                                                margin-top:5px;font-size: 14pt; height:40px; padding: 5px 7px;" > 
+                                                    <option disabled selected value="" style="display:none;">Committee</option>
+
+                                                        <?php
+            #RETRIEVE Sector Type-----------------------------------------------------
+                                                            $sql="SELECT * FROM committee";
+                                                            $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
+                                                            $res=mysql_query($sql) or die (mysql_error());
+                                                            $comID=0;
+                                                            while($data = mysql_fetch_array($res)){
+                                                                $comID=$data['comID'];
+                                                                echo "<option  value='$comID' style='color:black'>".$data['comName']."</option><br>";        
+                                                            }
+            #END OF RETRIEVE sector Type--------------------------------------------- 
+                                                        ?>
+                                                    </select>
+                                                </div>
+
                                             <input name="propose"placeholder="Proposed Budget"/><br>
                                             <input name="budget" placeholder="Budget Allocated"/><br>
-                                            <div id="option-sector" ><select name="comID" required style="width:100%;border-radius:5px; color:#9b9b9b;
-                                                margin-top:5px;font-size: 14pt; height:40px; padding: 5px 7px;" > 
-                                            <option disabled selected value="" style="display:none;">Committee</option>
 
-                                            <?php
-#RETRIEVE Sector Type-----------------------------------------------------
-                                                $sql="SELECT * FROM committee";
-                                                $result = mysqli_query($connect,$sql) or die("ERROR CONNECTING TO DB");
-                                                $res=mysql_query($sql) or die (mysql_error());
-                                                $comID=0;
-                                                while($data = mysql_fetch_array($res)){
-                                                    $comID=$data['comID'];
-                                                    echo "<option  value='$comID' style='color:black'>".$data['comName']."</option><br>";        
-                                                }
-#END OF RETRIEVE sector Type--------------------------------------------- 
-                                            ?>
-                                        </select></div> 
+                                            <h4 style="color:white;margin-left:5px">Image URL/Link :</h4>
+                                            <input name="imageLink" placeholder="Image Link"/><br>
 
                                         <br>
                                         <input name="submit" type="submit"   class="btn btn-primary" style="width:95%; margin-top:20px;"/>

@@ -7,8 +7,7 @@
         if( $data['projStat']==$prostat){
             $projectID=$data['projID'];
 #SQL for Image----------------------------------------------------------------------------------------
-            $image="pics/cat.jpg";
-
+            $image="pics/default.png"; //changed from cat to default --- angela
             $check++;
             $gallerySQL="SELECT * FROM gallery";
             $galleryresult = mysqli_query($connect,$gallerySQL) or die("ERROR CONNECTING TO DB");
